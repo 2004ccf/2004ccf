@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title> | Warehouse 文件管理系统</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+
+
+      <script src="/js/main.js"></script>
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    
+    .header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      flex-shrink: 0;
+    }
+    
+    .search-container {
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+    }
+    
+    .search-input {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 50px;
+      outline: none;
+      background-color: white;
+      color: #333;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-sizing: border-box;
+    }
+    
+    .search-input:focus {
+      box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+    }
+    
+    .search-results {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-height: 400px;
+      overflow-y: auto;
+      z-index: 1000;
+      margin-top: 0.5rem;
+      display: none;
+    }
+    
+    .search-result-item {
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    
+    .search-result-item:hover {
+      background-color: #f8f9fa;
+    }
+    
+    .search-result-item:last-child {
+      border-bottom: none;
+    }
+    
+    .search-result-title {
+      font-weight: bold;
+      color: #007bff;
+      margin-bottom: 0.5rem;
+    }
+    
+    .search-result-excerpt {
+      color: #666;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+    
+    .search-result-path {
+      color: #999;
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+    
+    .container {
+      display: flex;
+      flex: 1;
+      height: calc(100vh - 80px);
+      overflow: hidden;
+    }
+    
+    .sidebar {
+  width: 250px;
+  min-width: 250px;
+  max-width: 300px;
+      background-color: #f8f9fa;
+      border-right: 1px solid #dee2e6;
+      overflow-y: auto;
+      padding: 1rem;
+      flex-shrink: 0;
+    }
+    
+    .sidebar h3 {
+      color: #495057;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    
+    .folder-list {
+      list-style: none;
+    }
+    
+    .folder-item {
+      padding: 0.75rem;
+      margin-bottom: 0.25rem;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background-color 0.2s;
+      word-wrap: break-word;
+    }
+    
+    .folder-item:hover {
+      background-color: #e9ecef;
+    }
+    
+    .folder-item.active {
+      background-color: #007bff;
+      color: white;
+    }
+    
+    .folder-item a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      word-break: break-all;
+    }
+    
+    .content {
+      flex: 1;
+      padding: 2rem;
+      overflow-y: auto;
+      background-color: white;
+      max-width: none;
+      width: 100%;
+    }
+    
+    .content h1 {
+      color: #343a40;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+    
+    .content h2, .content h3 {
+      color: #495057;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .content p {
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      max-width: none;
+    }
+    
+    .content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin: 1.5rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .folder-icon {
+      margin-right: 0.5rem;
+    }
+    
+     
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      
+      .sidebar {
+        width: 100%;
+        height: 200px;
+        min-width: auto;
+        max-width: none;
+      }
+      
+      .content {
+        padding: 1rem;
+      }
+    }
+    
+     
+    .file-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      width: 100%;
+    }
+    
+    .file-item {
+      padding: 1.5rem;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      transition: all 0.2s;
+      width: 100%;
+    }
+    
+    .file-item:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+    
+     
+    .stats {
+      background-color: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      width: 100%;
+    }
+    
+    .sections-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+      width: 100%;
+    }
+    
+    .section-card {
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      padding: 1.5rem;
+      background-color: white;
+      transition: all 0.2s;
+      width: 100%;
+    }
+    
+    .section-card:hover {
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      transform: translateY(-3px);
+    }
+    
+     
+    .welcome-section,
+    .content-body {
+      width: 100%;
+      max-width: none;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="输入关键词搜索文章..." class="search-input">
+      <div id="searchResults" class="search-results"></div>
+    </div>
+  </header>
+  
+  <div class="container">
+    <aside class="sidebar">
+      <ul class="folder-list">
+        
+          <li class="folder-item">
+            <a href="/ai%E5%A5%A0%E5%9F%BA/">
+              <span class="folder-icon">📂</span>
+              ai奠基
+            </a>
+          </li>
+        
+          <li class="folder-item">
+            <a href="/github%E7%BD%91%E7%AB%99/">
+              <span class="folder-icon">📂</span>
+              github网站
+            </a>
+          </li>
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+          
+        
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+        
+      </ul>
+    </aside>
+    
+    <main class="content">
+      
+  <h1></h1>
+  
+  
+  
+  <div class="content-body">
+    
+  </div>
+  
+  
+
+    </main>
+  </div>
+
+  <script>
+    
+    const searchData = [
+      
+      {
+        title: "\"语言大模型的发展\"",
+        content: "\"我需要gpt 他很厉害\\n\"",
+        summary: "\"\\u003cp\\u003e我需要gpt 他很厉害\\u003c/p\\u003e\"",
+        url: "\"/ai%E5%A5%A0%E5%9F%BA/%E8%AF%AD%E8%A8%80%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8F%91%E5%B1%95/\"",
+        section: "\"ai奠基\""
+      },
+      
+      {
+        title: "\"\"",
+        content: "\"\"",
+        summary: "\"\"",
+        url: "\"/ai%E5%A5%A0%E5%9F%BA/%E6%9C%AA%E5%91%BD%E5%90%8D/\"",
+        section: "\"ai奠基\""
+      },
+      
+      {
+        title: "\"\"",
+        content: "\"首先，这是要把自己的想法，自己的思路文章要语言大模型进行总结，我要git根据我的计划提出构想指定思路以及具体的复习方案全部给到我，我在自己通过个人的大脑进行思考，选择最适合我的方案。\\n要自己了解整个内容的框架做思维导图要根据问gpt的内容来分析指导，两者是相互结合的。\\n首先呢，我就把我想要的东西给给他，让他来选择。\\n经过思维导图，把这些文字具象化思路整理化，信息化之后。 我还要把我想要的效果全部写上去，也就是最终他能给我实现什么效果，到时候这个项目完成之后，我要11对比，能不能完成完成的效果。也要采用第一性原则，开始之初就要根据我想要的效果设计出来，达到我想要的结果。\\n开始进入施工环节。 首先就要先用工具准备好要AI编程工具，AI语言大模型，时刻运用思维导图，还有OneNnte。 我采用ai的方式是这样子的：如果是一些指令比较简单的命令，我会采取一个免费ai来运行。如果是一些复杂的代码编写，我会采用一个付费的功能性强的AI来编写运行。最终实现一个效率以及运行的费用一个平衡点，达到小满。\\n测试\\n\"",
+        summary: "\"\\u003cp\\u003e首先，这是要把自己的想法，自己的思路文章要语言大模型进行总结，我要git根据我的计划提出构想指定思路以及具体的复习方案全部给到我，我在自己通过个人的大脑进行思考，选择最适合我的方案。\\u003c/p\\u003e\\n\\u003cp\\u003e要自己了解整个内容的框架做思维导图要根据问gpt的内容来分析指导，两者是相互结合的。\\u003c/p\\u003e\\n\\u003cp\\u003e首先呢，我就把我想要的东西给给他，让他来选择。\\u003cimg src=\\\"Pasted%20image%2020250715121307.png\\\" alt=\\\"\\\"\\u003e\\u003c/p\\u003e\\n\\u003cp\\u003e经过思维导图，把这些文字具象化思路整理化，信息化之后。\\n\\u003cimg src=\\\"Pasted%20image%2020250715121533.png\\\" alt=\\\"\\\"\\u003e\\n我还要把我想要的效果全部写上去，也就是最终他能给我实现什么效果，到时候这个项目完成之后，我要11对比，能不能完成完成的效果。也要采用第一性原则，开始之初就要根据我想要的效果设计出来，达到我想要的结果。\\u003c/p\\u003e\\n\\u003cp\\u003e开始进入施工环节。\\n首先就要先用工具准备好要AI编程工具\\u003cimg src=\\\"Pasted%20image%2020250715122405.png\\\" alt=\\\"\\\"\\u003e\\u003cimg src=\\\"Pasted%20image%2020250715122423.png\\\" alt=\\\"\\\"\\u003e，AI语言大模型，时刻运用思维导图，还有OneNnte。\\n我采用ai的方式是这样子的：如果是一些指令比较简单的命令，我会采取一个免费ai来运行。如果是一些复杂的代码编写，我会采用一个付费的功能性强的AI来编写运行。最终实现一个效率以及运行的费用一个平衡点，达到小满。\\u003c/p\\u003e\\n\\u003cp\\u003e测试\\u003cimg src=\\\"72c686a82fc80ae00ab6d3cb07262ab4.png\\\" alt=\\\"\\\"\\u003e\\u003c/p\\u003e\"",
+        url: "\"/github%E7%BD%91%E7%AB%99/%E5%88%9B%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84github%E5%AE%98%E7%BD%91%E7%BD%91%E7%AB%99/\"",
+        section: "\"github网站\""
+      },
+      
+      {
+        title: "\"\"",
+        content: "\"测试\\n\"",
+        summary: "\"\\u003cp\\u003e测试\\u003c/p\\u003e\"",
+        url: "\"/github%E7%BD%91%E7%AB%99/%E6%B5%8B%E8%AF%952/\"",
+        section: "\"github网站\""
+      },
+      
+    ];
+
+    
+    function performSearch(query) {
+      if (!query || query.length < 2) {
+        return [];
+      }
+
+      const results = [];
+      const queryLower = query.toLowerCase();
+
+      searchData.forEach(page => {
+        let score = 0;
+        let matchedText = '';
+        
+        
+        if (page.title.toLowerCase().includes(queryLower)) {
+          score += 10;
+          matchedText = page.title;
+        }
+        
+        
+        if (page.content.toLowerCase().includes(queryLower)) {
+          score += 5;
+          
+          
+          const contentLower = page.content.toLowerCase();
+          const index = contentLower.indexOf(queryLower);
+          if (index !== -1) {
+            const start = Math.max(0, index - 50);
+            const end = Math.min(page.content.length, index + query.length + 50);
+            matchedText = '...' + page.content.substring(start, end) + '...';
+          }
+        }
+        
+        if (score > 0) {
+          results.push({
+            ...page,
+            score: score,
+            excerpt: matchedText || page.content.substring(0, 100) + '...'
+          });
+        }
+      });
+
+      
+      return results.sort((a, b) => b.score - a.score).slice(0, 5);
+    }
+
+    
+    function displayResults(results) {
+      const resultsContainer = document.getElementById('searchResults');
+      
+      if (results.length === 0) {
+        resultsContainer.style.display = 'none';
+        return;
+      }
+
+      const html = results.map(result => `
+        <div class="search-result-item" onclick="window.location.href='${result.url}'">
+          <div class="search-result-title">${result.title}</div>
+          <div class="search-result-excerpt">${result.excerpt}</div>
+          <div class="search-result-path">${result.section}</div>
+        </div>
+      `).join('');
+
+      resultsContainer.innerHTML = html;
+      resultsContainer.style.display = 'block';
+    }
+
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.getElementById('searchInput');
+      const searchResults = document.getElementById('searchResults');
+      let searchTimeout;
+
+      searchInput.addEventListener('input', function() {
+        clearTimeout(searchTimeout);
+        const query = this.value.trim();
+        
+        if (query.length < 2) {
+          searchResults.style.display = 'none';
+          return;
+        }
+
+        
+        searchTimeout = setTimeout(() => {
+          const results = performSearch(query);
+          displayResults(results);
+        }, 300);
+      });
+
+      
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.search-container')) {
+          searchResults.style.display = 'none';
+        }
+      });
+
+      
+      searchInput.addEventListener('focus', function() {
+        if (this.value.trim().length >= 2) {
+          const results = performSearch(this.value.trim());
+          displayResults(results);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
