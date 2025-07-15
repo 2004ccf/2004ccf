@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>GPT on Warehouse 文件管理系统</title>
-    <link>http://localhost:1313/tags/gpt/</link>
+    <link>https://2004ccf.github.io/2004CCF/tags/gpt/</link>
     <description>Recent content in GPT on Warehouse 文件管理系统</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 15 Jan 2024 10:00:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/gpt/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://2004ccf.github.io/2004CCF/tags/gpt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>语言大模型的发展</title>
-      <link>http://localhost:1313/ai%E5%A5%A0%E5%9F%BA/%E8%AF%AD%E8%A8%80%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8F%91%E5%B1%95/</link>
+      <link>https://2004ccf.github.io/2004CCF/ai%E5%A5%A0%E5%9F%BA/%E8%AF%AD%E8%A8%80%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8F%91%E5%B1%95/</link>
       <pubDate>Mon, 15 Jan 2024 10:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/ai%E5%A5%A0%E5%9F%BA/%E8%AF%AD%E8%A8%80%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8F%91%E5%B1%95/</guid>
+      <guid>https://2004ccf.github.io/2004CCF/ai%E5%A5%A0%E5%9F%BA/%E8%AF%AD%E8%A8%80%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8F%91%E5%B1%95/</guid>
       <description>&lt;p&gt;我需要gpt 他很厉害 成功&lt;/p&gt;</description>
     </item>
   </channel>
