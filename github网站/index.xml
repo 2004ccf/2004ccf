@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Github网站s on Warehouse 文件管理系统</title>
-    <link>https://2004ccf.github.io/2004CCF/github%E7%BD%91%E7%AB%99/</link>
+    <link>http://localhost:1313/2004CCF/github%E7%BD%91%E7%AB%99/</link>
     <description>Recent content in Github网站s on Warehouse 文件管理系统</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <atom:link href="https://2004ccf.github.io/2004CCF/github%E7%BD%91%E7%AB%99/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/2004CCF/github%E7%BD%91%E7%AB%99/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://2004ccf.github.io/2004CCF/github%E7%BD%91%E7%AB%99/%E5%88%9B%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84github%E5%AE%98%E7%BD%91%E7%BD%91%E7%AB%99/</link>
+      <link>http://localhost:1313/2004CCF/github%E7%BD%91%E7%AB%99/%E5%88%9B%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84github%E5%AE%98%E7%BD%91%E7%BD%91%E7%AB%99/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://2004ccf.github.io/2004CCF/github%E7%BD%91%E7%AB%99/%E5%88%9B%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84github%E5%AE%98%E7%BD%91%E7%BD%91%E7%AB%99/</guid>
+      <guid>http://localhost:1313/2004CCF/github%E7%BD%91%E7%AB%99/%E5%88%9B%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84github%E5%AE%98%E7%BD%91%E7%BD%91%E7%AB%99/</guid>
       <description>&lt;p&gt;首先，这是要把自己的想法，自己的思路文章要语言大模型进行总结，我要git根据我的计划提出构想指定思路以及具体的复习方案全部给到我，我在自己通过个人的大脑进行思考，选择最适合我的方案。&lt;/p&gt;&#xA;&lt;p&gt;要自己了解整个内容的框架做思维导图要根据问gpt的内容来分析指导，两者是相互结合的。&lt;/p&gt;&#xA;&lt;p&gt;首先呢，我就把我想要的东西给给他，让他来选择。&lt;img src=&#34;Pasted%20image%2020250715121307.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;经过思维导图，把这些文字具象化思路整理化，信息化之后。&#xA;&lt;img src=&#34;Pasted%20image%2020250715121533.png&#34; alt=&#34;&#34;&gt;&#xA;我还要把我想要的效果全部写上去，也就是最终他能给我实现什么效果，到时候这个项目完成之后，我要11对比，能不能完成完成的效果。也要采用第一性原则，开始之初就要根据我想要的效果设计出来，达到我想要的结果。&lt;/p&gt;&#xA;&lt;p&gt;开始进入施工环节。&#xA;首先就要先用工具准备好要AI编程工具&lt;img src=&#34;Pasted%20image%2020250715122405.png&#34; alt=&#34;&#34;&gt;&lt;img src=&#34;Pasted%20image%2020250715122423.png&#34; alt=&#34;&#34;&gt;，AI语言大模型，时刻运用思维导图，还有OneNnte。&#xA;我采用ai的方式是这样子的：如果是一些指令比较简单的命令，我会采取一个免费ai来运行。如果是一些复杂的代码编写，我会采用一个付费的功能性强的AI来编写运行。最终实现一个效率以及运行的费用一个平衡点，达到小满。&lt;/p&gt;&#xA;&lt;p&gt;测试&lt;img src=&#34;72c686a82fc80ae00ab6d3cb07262ab4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
