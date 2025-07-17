@@ -1,33 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>首页 on Warehouse 文件管理系统</title>
-    <link>http://localhost:1313/2004CCF/</link>
-    <description>Recent content in 首页 on Warehouse 文件管理系统</description>
+    <title>量化数据（world变数据再提炼）s on Warehouse 文件管理系统</title>
+    <link>http://localhost:1313/2004CCF/%E9%87%8F%E5%8C%96%E6%95%B0%E6%8D%AEworld%E5%8F%98%E6%95%B0%E6%8D%AE%E5%86%8D%E6%8F%90%E7%82%BC/</link>
+    <description>Recent content in 量化数据（world变数据再提炼）s on Warehouse 文件管理系统</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 17 Jul 2024 12:00:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/2004CCF/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>创建属于自己的github官网网站</title>
-      <link>http://localhost:1313/2004CCF/github%E7%BD%91%E7%AB%99/%E5%88%9B%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84github%E5%AE%98%E7%BD%91%E7%BD%91%E7%AB%99/</link>
-      <pubDate>Wed, 17 Jul 2024 12:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/2004CCF/github%E7%BD%91%E7%AB%99/%E5%88%9B%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84github%E5%AE%98%E7%BD%91%E7%BD%91%E7%AB%99/</guid>
-      <description>&lt;p&gt;首先，这是要把自己的想法，自己的思路文章要语言大模型进行总结，我要git根据我的计划提出构想指定思路以及具体的复习方案全部给到我，我在自己通过个人的大脑进行思考，选择最适合我的方案。&lt;/p&gt;&#xA;&lt;p&gt;要自己了解整个内容的框架做思维导图要根据问gpt的内容来分析指导，两者是相互结合的。&lt;/p&gt;&#xA;&lt;p&gt;首先呢，我就把我想要的东西给给他，让他来选择。&lt;img src=&#34;Pasted%20image%2020250715121307.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;经过思维导图，把这些文字具象化思路整理化，信息化之后。&#xA;&lt;img src=&#34;Pasted%20image%2020250715121533.png&#34; alt=&#34;&#34;&gt;&#xA;我还要把我想要的效果全部写上去，也就是最终他能给我实现什么效果，到时候这个项目完成之后，我要11对比，能不能完成完成的效果。也要采用第一性原则，开始之初就要根据我想要的效果设计出来，达到我想要的结果。&lt;/p&gt;&#xA;&lt;p&gt;开始进入施工环节。&#xA;首先就要先用工具准备好要AI编程工具&lt;img src=&#34;Pasted%20image%2020250715122405.png&#34; alt=&#34;&#34;&gt;&lt;img src=&#34;Pasted%20image%2020250715122423.png&#34; alt=&#34;&#34;&gt;，AI语言大模型，时刻运用思维导图，还有OneNnte。&#xA;我采用ai的方式是这样子的：如果是一些指令比较简单的命令，我会采取一个免费ai来运行。如果是一些复杂的代码编写，我会采用一个付费的功能性强的AI来编写运行。最终实现一个效率以及运行的费用一个平衡点，达到小满。&lt;/p&gt;&#xA;&lt;p&gt;测试&lt;img src=&#34;72c686a82fc80ae00ab6d3cb07262ab4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
-    </item>
+    <atom:link href="http://localhost:1313/2004CCF/%E9%87%8F%E5%8C%96%E6%95%B0%E6%8D%AEworld%E5%8F%98%E6%95%B0%E6%8D%AE%E5%86%8D%E6%8F%90%E7%82%BC/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>案例：影视飓风量化数据</title>
       <link>http://localhost:1313/2004CCF/%E9%87%8F%E5%8C%96%E6%95%B0%E6%8D%AEworld%E5%8F%98%E6%95%B0%E6%8D%AE%E5%86%8D%E6%8F%90%E7%82%BC/%E6%A1%88%E4%BE%8B%E5%BD%B1%E8%A7%86%E9%A3%93%E9%A3%8E%E9%87%8F%E5%8C%96%E6%95%B0%E6%8D%AE/</link>
       <pubDate>Wed, 17 Jul 2024 12:00:00 +0800</pubDate>
       <guid>http://localhost:1313/2004CCF/%E9%87%8F%E5%8C%96%E6%95%B0%E6%8D%AEworld%E5%8F%98%E6%95%B0%E6%8D%AE%E5%86%8D%E6%8F%90%E7%82%BC/%E6%A1%88%E4%BE%8B%E5%BD%B1%E8%A7%86%E9%A3%93%E9%A3%8E%E9%87%8F%E5%8C%96%E6%95%B0%E6%8D%AE/</guid>
       <description>&lt;p&gt;背景：当你成为一个博主，并且有了一个庞大的数据样本。，这些数据样本就存在后台数据中。量化数据就是把这些在后台数据中的数据样本将它总结整理出规律，规律能够帮助你把内容做的更好。(思维转变：用数据做好内容)&#xA;&lt;a href=&#34;https://www.bilibili.com/video/BV1itK3zsEx2/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=795601e8fe7a44a3895f813db6868516&#34;&gt;https://www.bilibili.com/video/BV1itK3zsEx2/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=795601e8fe7a44a3895f813db6868516&lt;/a&gt;&#xA;先认可：不同的社交平台，拥有不同平台的算法，也就是推送流量的机制不同。你想要在某平台做大做强，你就必须要参与他的游戏规则。——当你摸清知道了这个平台的规则之后，立刻应用到实际内容中，然后从后台数据查看，复盘。想要玩明白视频平台，不单单查看视频播放量这数据，更多需要多维的角度。&lt;/p&gt;&#xA;&lt;p&gt;想把这个数据变为可视化。，进行量化就需要借助工具。比如-飞书多维表格-设置好自动获取平台后台数据（API)最后的效果呈现出来是实时更新的仪表盘，数据可视化并且方便查看。&lt;img src=&#34;a17901308e499f8966e33109d387cd93.png&#34; alt=&#34;&#34;&gt;&#xA;标准流程——1.你在脑海里已经有了一个拍摄的思路与主题,借助思维导图或工作流写好每个步骤。&#xA;2.需要参考之前作品的量化数据总结的规律来指导你拍摄这个作品。（拍摄包含剪辑等）&#xA;3.完成之后上传到平台，通过你这个作品的后台数据反馈来优化你的规律，并且进行复盘在这次拍摄中应该怎样做与数据规律结合的更好。&#xA;本章摘要：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;稳定的更新以获取日常的视频增量和流量推送；&lt;/li&gt;&#xA;&lt;li&gt;一定要有一些突破/反差/搞笑/吸引眼球的视频，来做到爆款，增加推送范围和出圈机会，实现粉丝的倍增；&lt;/li&gt;&#xA;&lt;li&gt;个人IP/超级符号-大多数情况下，要直接在封面展示up的形象或代号，胜过突出产品内容&lt;/li&gt;&#xA;&lt;li&gt;内容上需要直接的刺激/大信息量；快速转场，每个主题在1min以内&lt;/li&gt;&#xA;&lt;li&gt;广告的植入方式不重要&#xA;扩展&#xA;1.清晰的定位&#xA;2.有自己的品牌化（赚钱），IP化（不赚钱）（有特点的标识？个性化内容？我的理解是能让你通过logo等认出这个up主的东西）&#xA;3.注意视频的节奏和故事性&#xA;4.内容&#xA;所以，想做一个账号，可以总结成一个公式“内容×（定位+超级符号+节奏+故事）”&#xA;但是这并不能决定变现，就像影视飓风，无论现在如何，他们公司未来赚钱的重头，一定不是接各种广告，而是卖自己开发的产品。&#xA;因此，追求粉丝量对于新媒体账号毫无意义，重要的是留住你最重要的几个粉丝，他们才是变现的关键&#xA;所以，在未来你如果想做一个赚钱的自媒体账号：&#xA;1.与一定的符合你账号垂直的粉丝基数&#xA;2.有自己真正的产品。&#xA;3.学会营销出售给与消费力的粉丝&#xA;4.爆款的有质量的账号内容&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
-    </item>
-    <item>
-      <title>语言大模型的发展</title>
-      <link>http://localhost:1313/2004CCF/ai%E5%A5%A0%E5%9F%BA/%E8%AF%AD%E8%A8%80%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8F%91%E5%B1%95/</link>
-      <pubDate>Mon, 15 Jan 2024 10:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/2004CCF/ai%E5%A5%A0%E5%9F%BA/%E8%AF%AD%E8%A8%80%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8F%91%E5%B1%95/</guid>
-      <description>&lt;p&gt;我需要gpt 他很厉害 成功&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
