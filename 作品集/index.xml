@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>作品集s on Warehouse 文件管理系统</title>
+    <link>http://localhost:1313/2004CCF/%E4%BD%9C%E5%93%81%E9%9B%86/</link>
+    <description>Recent content in 作品集s on Warehouse 文件管理系统</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:1313/2004CCF/%E4%BD%9C%E5%93%81%E9%9B%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/2004CCF/%E4%BD%9C%E5%93%81%E9%9B%86/stm%E6%9C%BA%E6%A2%B0%E7%8B%97%E6%A8%A1%E4%BB%BF/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2004CCF/%E4%BD%9C%E5%93%81%E9%9B%86/stm%E6%9C%BA%E6%A2%B0%E7%8B%97%E6%A8%A1%E4%BB%BF/</guid>
+      <description>&lt;p&gt;硬件来源pdd，说明：电子版百度网盘和哔哩哔哩视频：&lt;a href=&#34;https://www.bilibili.com/video/BV17hAaeXEY4?spm_id_from=333.788.videopod.sections&amp;amp;vd_source=795601e8fe7a44a3895f813db6868516&#34;&gt;STM32智能桌面宠物新电路板总教程（v1.1）_哔哩哔哩_bilibili&lt;/a&gt; 代码提供：互联网&lt;/p&gt;&#xA;&lt;p&gt;准备：电烙铁，万用表，镊子。&#xA;开始出现的问题：用了一个下午才进展一点，速度太慢了。主要：电烙铁温度不够达不到要求，锡线质量太差，对贴片电容这些很小的第一次焊接没练过费时还丑&lt;img src=&#34;c255ff1ca42ccfda1d6d8a598e8eaa7e.jpeg&#34; alt=&#34;&#34;&gt;&#xA;出现一个问题当PCD版银色的专门来固定锡的位置脱离，没办法固定锡了，怎么办？ 需要学习补救措施。&#xA;在后面测试灯的时候发现按计划要亮两颗led灯的，发现只亮了一颗。我不会排查出是什么原因，其中很多一部分我根本没看说明书也看不懂说明书，而且我用万用表不熟练，拿他不知所措胡乱测，没有计划排查故障点就随意测。（我当时应该问把我的问题详细化问ai要他给我排查的，我没想到，也证明我还没有把ai的使用真正潜移默化的熟练使用和想起来要用他）&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
